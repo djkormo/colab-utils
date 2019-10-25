@@ -34,8 +34,9 @@ def _check_gpu_available():
     print("You might get better GPU by reseting the runtime.")
   else:
     return True
-
-  r#eturn IPython.utils.io.ask_yes_no("Do you want to continue? [y/n]")
+ 
+  return True
+  #return IPython.utils.io.ask_yes_no("Do you want to continue? [y/n]")
 
 def _setupSSHDImpl(ngrok_token, ngrok_region):
   #apt-get update
@@ -248,3 +249,11 @@ subprocess.run(
 def setupVNC(ngrok_region = None):
   if setupSSHD(ngrok_region, True):
     _setupVNC()
+	
+def _setupSpark():
+  _download("https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip", "ngrok.zip")
+  shutil.unpack_archive("ngrok.zip")
+  
+
+def setupSpark()
+  return True 	
