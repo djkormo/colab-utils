@@ -254,5 +254,5 @@ def _setupSpark():
   shutil.unpack_archive("ngrok.zip")
   
 
-def setupSpark()
+def setupSpark():
   return True 	
