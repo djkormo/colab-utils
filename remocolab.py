@@ -247,7 +247,7 @@ subprocess.run(
   print(r.stdout)
 
 def setupVNC(ngrok_region = None):
-  if setupSSHD(ngrok_region, True):
+  if setupSSHD(ngrok_region, False):
     _setupVNC()
 	
 def _setupSpark():
