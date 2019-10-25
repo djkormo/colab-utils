@@ -28,7 +28,7 @@ def _check_gpu_available():
   r = subprocess.run(["nvidia-smi", "--query-gpu=name", "--format=csv,noheader"], stdout = subprocess.PIPE, universal_newlines = True)
   if r.returncode != 0:
     print("This is not a runtime with GPU")
-	return False
+  return False
   elif r.stdout == "Tesla K80\n":
     print("Warning! GPU of your assigned virtual machine is Tesla K80.")
     print("You might get better GPU by reseting the runtime.")
